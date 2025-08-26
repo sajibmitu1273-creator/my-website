@@ -1,0 +1,265 @@
+<meta name='viewport' content='width=device-width, initial-scale=1'/><!DOCTYPE html><html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>সজিব - পার্সোনাল ওয়েবসাইট</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/yourfontawesomekit.js" crossorigin="anonymous"></script>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to right, #e0eafc, #cfdef3);
+            color: #333;
+            scroll-behavior: smooth;
+        }
+        header {
+            background: linear-gradient(135deg, #2c3e50, #3498db);
+            color: #fff;
+            padding: 80px 20px;
+            text-align: center;
+            position: relative;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 3rem;
+            font-weight: 700;
+            animation: fadeInDown 1s ease;
+        }
+        header p {
+            font-size: 1.2rem;
+            margin-top: 10px;
+            animation: fadeInUp 1.5s ease;
+        }
+        .profile-pic {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 4px solid #fff;
+            margin-top: 20px;
+            object-fit: cover;
+            animation: zoomIn 2s ease;
+        }
+        nav {
+            background: #34495e;
+            padding: 15px;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        nav a {
+            color: #fff;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s, transform 0.3s;
+        }
+        nav a:hover {
+            color: #f1c40f;
+            transform: scale(1.1);
+        }
+        section {
+            padding: 60px 20px;
+            max-width: 1000px;
+            margin: auto;
+        }
+        .card {
+            background: #fff;
+            padding: 30px;
+            margin: 30px 0;
+            border-radius: 15px;
+            box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+            transition: transform 0.3s, box-shadow 0.3s, opacity 0.6s;
+            opacity: 0;
+        }
+        .card.visible {
+            opacity: 1;
+        }
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 12px 24px rgba(0,0,0,0.2);
+        }
+        h2 {
+            color: #2c3e50;
+            border-left: 5px solid #3498db;
+            padding-left: 10px;
+            animation: fadeInLeft 1s ease;
+        }
+        ul.skills-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            list-style: none;
+            padding: 0;
+        }
+        ul.skills-list li {
+            background: #ecf0f1;
+            padding: 10px;
+            border-radius: 8px;
+            text-align: center;
+            font-weight: 500;
+            transition: transform 0.3s, background 0.3s;
+        }
+        ul.skills-list li:hover {
+            transform: scale(1.05);
+            background: #d6eaf8;
+        }
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+        .portfolio-item {
+            overflow: hidden;
+            border-radius: 10px;
+            transition: transform 0.3s;
+        }
+        .portfolio-item img {
+            width: 100%;
+            display: block;
+            transition: transform 0.5s;
+        }
+        .portfolio-item:hover img {
+            transform: scale(1.1) rotate(2deg);
+        }
+        .portfolio-item p {
+            text-align: center;
+            margin: 10px 0 0 0;
+            font-weight: 500;
+        }
+        .contact-info p {
+            font-size: 1.1rem;
+            margin: 8px 0;
+            transition: transform 0.3s;
+        }
+        .contact-info p:hover {
+            transform: translateX(5px);
+        }
+        .contact-info i {
+            margin-right: 10px;
+            color: #3498db;
+        }
+        .social-buttons {
+            margin-top: 15px;
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+        .social-buttons a {
+            display: inline-block;
+            padding: 10px 15px;
+            border-radius: 50px;
+            background: #3498db;
+            color: #fff;
+            font-size: 1.2rem;
+            transition: background 0.3s, transform 0.3s;
+            text-decoration: none;
+        }
+        .social-buttons a:hover {
+            background: #2980b9;
+            transform: scale(1.2);
+        }
+        footer {
+            background: #2c3e50;
+            color: #fff;
+            text-align: center;
+            padding: 25px;
+            margin-top: 40px;
+        }
+        @keyframes fadeInDown {
+            from {opacity: 0; transform: translateY(-30px);}
+            to {opacity: 1; transform: translateY(0);}
+        }
+        @keyframes fadeInUp {
+            from {opacity: 0; transform: translateY(30px);}
+            to {opacity: 1; transform: translateY(0);}
+        }
+        @keyframes fadeInLeft {
+            from {opacity: 0; transform: translateX(-30px);}
+            to {opacity: 1; transform: translateX(0);}
+        }
+        @keyframes zoomIn {
+            from {opacity: 0; transform: scale(0.5);}
+            to {opacity: 1; transform: scale(1);}
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>আমি সজিব</h1>
+        <p>💻 ওয়েব ডেভেলপার | 🎨 ডিজাইনার | 🚀 টেক এন্থুসিয়াস্ট</p>
+        <img src="https://via.placeholder.com/150" alt="সজিবের ছবি" class="profile-pic">
+    </header><nav>
+    <a href="#about">আমার সম্পর্কে</a>
+    <a href="#skills">দক্ষতা</a>
+    <a href="#portfolio">পোর্টফোলিও</a>
+    <a href="#contact">যোগাযোগ</a>
+</nav>
+
+<section id="about">
+    <div class="card">
+        <h2>আমার সম্পর্কে</h2>
+        <p>হ্যালো! আমি <b>সজিব</b>। আমি ওয়েব ডিজাইন ও ডেভেলপমেন্টে আগ্রহী। নতুন টেকনোলজি শেখা ও ক্রিয়েটিভ প্রোজেক্টে কাজ করতে ভালোবাসি। 🌟</p>
+        <div class="social-buttons">
+            <a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+            <a href="#" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#" target="_blank"><i class="fab fa-github"></i></a>
+        </div>
+    </div>
+</section>
+
+<section id="skills">
+    <div class="card">
+        <h2>দক্ষতা</h2>
+        <ul class="skills-list">
+            <li>⚡ HTML, CSS, JavaScript</li>
+            <li>📱 Responsive Web Design</li>
+            <li>🖥️ WordPress & CMS</li>
+            <li>🎨 Graphic Design Basics</li>
+        </ul>
+    </div>
+</section>
+
+<section id="portfolio">
+    <div class="card">
+        <h2>পোর্টফোলিও</h2>
+        <div class="portfolio-grid">
+            <div class="portfolio-item"><img src="https://via.placeholder.com/300x200" alt="Project 1"><p>Project 1</p></div>
+            <div class="portfolio-item"><img src="https://via.placeholder.com/300x200" alt="Project 2"><p>Project 2</p></div>
+            <div class="portfolio-item"><img src="https://via.placeholder.com/300x200" alt="Project 3"><p>Project 3</p></div>
+            <div class="portfolio-item"><img src="https://via.placeholder.com/300x200" alt="Project 4"><p>Project 4</p></div>
+        </div>
+    </div>
+</section>
+
+<section id="contact">
+    <div class="card contact-info">
+        <h2>যোগাযোগ</h2>
+        <p><i class="fas fa-envelope"></i> sajib@example.com</p>
+        <p><i class="fas fa-phone"></i> +8801XXXXXXXXX</p>
+        <p><i class="fab fa-facebook"></i> facebook.com/sajib</p>
+    </div>
+</section>
+
+<footer>
+    <p>© ২০২৫ সজিব | সর্বস্বত্ব সংরক্ষিত</p>
+</footer>
+
+<script>
+    // Scroll animation for cards
+    const cards = document.querySelectorAll('.card');
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if(entry.isIntersecting){
+                entry.target.classList.add('visible');
+            }
+        });
+    }, { threshold: 0.2 });
+    cards.forEach(card => observer.observe(card));
+</script>
+
+</body>
+</html>
